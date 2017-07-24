@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pp_columns_three_uneven.pp_background
+    - field.field.paragraph.pp_columns_three_uneven.pp_column_content_3
+    - field.field.paragraph.pp_columns_three_uneven.pp_column_style_3
+    - field.field.paragraph.pp_columns_three_uneven.pp_width
+    - paragraphs.paragraphs_type.pp_columns_three_uneven
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.pp_columns_three_uneven.default
+targetEntityType: paragraph
+bundle: pp_columns_three_uneven
+mode: default
+content:
+  pp_background:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+  pp_column_content_3:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  pp_column_style_3:
+    type: list_key
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  pp_width:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+hidden:
+  created: true
+  uid: true

@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.styleguide_typography_row.field_sg_column_1
+    - field.field.paragraph.styleguide_typography_row.field_sg_column_2
+    - paragraphs.paragraphs_type.styleguide_typography_row
+  module:
+    - text
+id: paragraph.styleguide_typography_row.default
+targetEntityType: paragraph
+bundle: styleguide_typography_row
+mode: default
+content:
+  field_sg_column_1:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_sg_column_2:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

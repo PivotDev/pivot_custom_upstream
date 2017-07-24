@@ -1,0 +1,86 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sg_swatch
+    - paragraphs.paragraphs_type.styleguide_colors
+    - paragraphs.paragraphs_type.styleguide_swatch_row
+  module:
+    - entity_reference_revisions
+id: paragraph.styleguide_swatch_row.field_sg_swatch
+field_name: field_sg_swatch
+entity_type: paragraph
+bundle: styleguide_swatch_row
+label: Swatch
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      styleguide_colors: styleguide_colors
+    target_bundles_drag_drop:
+      styleguide_swatch_row:
+        weight: 21
+        enabled: false
+      benefit_list_with_icons:
+        weight: 22
+        enabled: false
+      content_body:
+        weight: 23
+        enabled: false
+      content_column:
+        weight: 24
+        enabled: false
+      content_with_sidebar:
+        weight: 25
+        enabled: false
+      feature_list_w_icons_:
+        weight: 26
+        enabled: false
+      icon_with_caption:
+        weight: 27
+        enabled: false
+      image_and_content:
+        weight: 28
+        enabled: false
+      inset_image:
+        weight: 29
+        enabled: false
+      inset_image_right:
+        weight: 30
+        enabled: false
+      reference_a_block:
+        weight: 31
+        enabled: false
+      row_product_benefits:
+        weight: 32
+        enabled: false
+      slide_image_para:
+        weight: 33
+        enabled: false
+      styleguide_colors:
+        enabled: true
+        weight: 34
+      styleguide_image:
+        weight: 35
+        enabled: false
+      styleguide_row:
+        weight: 36
+        enabled: false
+      styleguide_text:
+        weight: 37
+        enabled: false
+      styleguide_typography_row:
+        weight: 38
+        enabled: false
+      styleguide_vid:
+        weight: 39
+        enabled: false
+      view_reference:
+        weight: 40
+        enabled: false
+field_type: entity_reference_revisions

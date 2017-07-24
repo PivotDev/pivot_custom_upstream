@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.styleguide_image.field_sg_image
+    - paragraphs.paragraphs_type.styleguide_image
+  module:
+    - image
+id: paragraph.styleguide_image.default
+targetEntityType: paragraph
+bundle: styleguide_image
+mode: default
+content:
+  field_sg_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

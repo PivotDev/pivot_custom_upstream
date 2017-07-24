@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sg_row_header
+    - paragraphs.paragraphs_type.styleguide_row
+id: paragraph.styleguide_row.field_sg_row_header
+field_name: field_sg_row_header
+entity_type: paragraph
+bundle: styleguide_row
+label: 'Row header'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

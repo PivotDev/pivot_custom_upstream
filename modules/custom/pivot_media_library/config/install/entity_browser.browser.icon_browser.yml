@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.icon_library
+  module:
+    - views
+name: icon_browser
+label: 'Icon Browser'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Icon Browser'
+  auto_open: true
+selection_display: no_display
+selection_display_configuration:
+  entity_type: node
+  display: label
+  display_settings: {  }
+  select_text: 'Use selected'
+  selection_hidden: 0
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  388f34d6-ca20-4b76-b6ff-7d6a0d7f9cb5:
+    settings:
+      view: icon_library
+      view_display: entity_browser_1
+      submit_text: 'Select Icon'
+      auto_select: false
+    uuid: 388f34d6-ca20-4b76-b6ff-7d6a0d7f9cb5
+    weight: 1
+    label: 'Icon Library'
+    id: view

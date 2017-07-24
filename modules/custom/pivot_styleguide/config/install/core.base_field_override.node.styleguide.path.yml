@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.styleguide
+  module:
+    - path
+id: node.styleguide.path
+field_name: path
+entity_type: node
+bundle: styleguide
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: styleguide_swatch_row
+label: 'Styleguide swatch row'
+behavior_plugins: {  }

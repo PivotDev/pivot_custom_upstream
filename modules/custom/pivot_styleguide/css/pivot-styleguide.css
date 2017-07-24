@@ -1,0 +1,98 @@
+/*Styleguide*/
+
+.sg-row {
+  margin-bottom: 30px;
+}
+.sg-image {
+  z-index: 10;
+}
+
+.sg-image img {
+  border: 1px solid #ccc;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.sg-image img:hover {
+  -webkit-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3);
+}
+.sg-text h2 {
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  margin-bottom: 1em;
+  color: #5599BB;
+}
+.sg-row:first-of-type {
+  margin-top: 5vw;
+}
+.sg-button {
+  background-color: #AADD33;
+  font-size: 14px;
+  padding: 1em 1.5em;
+  color: white !important;
+  border-radius: 6px;
+  margin-top: 1em;
+  display: inline-block;
+  font-weight: 500;
+}
+.list-swatches li p {
+  margin: 0;
+  font-size: 16px;
+}
+.swatch {
+  width: 15vw;
+  height: 15vw;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+.rgb-items {
+  display: inline-block;
+}
+.type-table p {
+  font-size: 16px;
+  margin: 0;
+}
+.sg-row .col-sm-4, .sg-row .col-sm-8 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: 100px;
+}
+.sg-row .table-row {
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+}
+.table-row .col-sm-8 {
+  border-left: 1px solid #ccc;
+}
+.sg-row .row {}
+.sg-menu ul.menu {
+  text-align: center;
+  margin: 20px 0;
+}
+.sg-menu ul.menu li {
+  display: inline-block;
+  margin: 0 1rem;
+  /*background: pink;*/
+}
+p .rgb-items {
+  font-weight: bold;
+}
+p .rgb-items:nth-child(1) {
+  color: red;
+}
+p .rgb-items:nth-child(2) {
+  color: green;
+}
+p .rgb-items:nth-child(3) {
+  color: blue;
+}
+
+@media screen and (min-width: 768px) {
+  /*  Hide clearfix so paragraph columns
+        can float left on ~ 768 and above */
+  .sg-row>.paragraph:after {
+    display: none;
+    background: red;
+  }
+}

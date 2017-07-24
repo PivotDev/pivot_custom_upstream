@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: view_reference
+label: 'View reference'
+behavior_plugins: {  }

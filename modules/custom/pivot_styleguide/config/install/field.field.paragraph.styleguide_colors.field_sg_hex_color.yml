@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sg_hex_color
+    - paragraphs.paragraphs_type.styleguide_colors
+id: paragraph.styleguide_colors.field_sg_hex_color
+field_name: field_sg_hex_color
+entity_type: paragraph
+bundle: styleguide_colors
+label: 'Hex color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

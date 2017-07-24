@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.styleguide_text.field_sg_text_block
+    - paragraphs.paragraphs_type.styleguide_text
+  module:
+    - text
+id: paragraph.styleguide_text.default
+targetEntityType: paragraph
+bundle: styleguide_text
+mode: default
+content:
+  field_sg_text_block:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sg_text_block
+    - paragraphs.paragraphs_type.styleguide_text
+  module:
+    - text
+id: paragraph.styleguide_text.field_sg_text_block
+field_name: field_sg_text_block
+entity_type: paragraph
+bundle: styleguide_text
+label: 'Text block'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

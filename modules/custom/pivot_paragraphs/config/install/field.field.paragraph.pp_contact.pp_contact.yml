@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.pp_contact
+    - paragraphs.paragraphs_type.pp_contact
+id: paragraph.pp_contact.pp_contact
+field_name: pp_contact
+entity_type: paragraph
+bundle: pp_contact
+label: 'Contact Form'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:contact_form'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

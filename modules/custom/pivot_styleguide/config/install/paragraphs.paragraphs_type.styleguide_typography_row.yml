@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: styleguide_typography_row
+label: 'Styleguide typography row'
+behavior_plugins: {  }

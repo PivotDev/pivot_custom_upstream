@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pp_simple.pp_background
+    - field.field.paragraph.pp_simple.pp_text
+    - field.field.paragraph.pp_simple.pp_width
+    - paragraphs.paragraphs_type.pp_simple
+  module:
+    - text
+id: paragraph.pp_simple.default
+targetEntityType: paragraph
+bundle: pp_simple
+mode: default
+content:
+  pp_background:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  pp_text:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  pp_width:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+hidden:
+  created: true
+  status: true
+  uid: true

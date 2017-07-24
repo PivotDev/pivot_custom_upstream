@@ -1,0 +1,41 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.styleguide-menu
+  module:
+    - system
+    - user
+  theme:
+    - seven
+third_party_settings: {  }
+id: styleguidemenu
+theme: seven
+region: ''
+weight: 0
+provider: null
+plugin: 'menu_block:styleguide-menu'
+settings:
+  id: 'menu_block:styleguide-menu'
+  label: 'Styleguide Menu'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 1
+  parent: 'styleguide-menu:'
+  suggestion: styleguide_menu
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+      site_administrator: site_administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    pages: "/user/*\r\n/styleguide\r\n/styleguide/*"
+    negate: false
+    context_mapping: {  }

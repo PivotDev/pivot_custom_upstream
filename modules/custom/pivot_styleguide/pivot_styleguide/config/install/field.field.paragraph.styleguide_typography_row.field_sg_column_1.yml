@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sg_column_1
+    - paragraphs.paragraphs_type.styleguide_typography_row
+  module:
+    - text
+id: paragraph.styleguide_typography_row.field_sg_column_1
+field_name: field_sg_column_1
+entity_type: paragraph
+bundle: styleguide_typography_row
+label: 'Column 1'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: "<p><strong>H1 - Times, Georgia, serif, normal, 60px, #969696</strong><br />\r\nFont, Style, Size, Color</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

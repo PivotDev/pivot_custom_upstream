@@ -1,0 +1,9 @@
+pivot-paragraphs:
+  css:
+    component:
+      css/pivot-paragraphs.css:
+        minified: false
+      css/pivot-paragraphs-colors.css:
+        minified: false
+  dependencies:
+    - core/jquery

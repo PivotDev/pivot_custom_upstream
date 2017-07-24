@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.styleguide_colors.field_sg_hex_color
+    - field.field.paragraph.styleguide_colors.field_sg_rgb_color
+    - paragraphs.paragraphs_type.styleguide_colors
+id: paragraph.styleguide_colors.default
+targetEntityType: paragraph
+bundle: styleguide_colors
+mode: default
+content:
+  field_sg_hex_color:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_sg_rgb_color:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

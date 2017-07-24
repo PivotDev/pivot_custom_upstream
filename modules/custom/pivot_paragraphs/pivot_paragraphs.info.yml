@@ -1,0 +1,25 @@
+name: Pivot Paragraphs
+type: module
+description: A suite of Paragraph bundles made with the Boostrap framework for Pivot Design.
+# core: 8.x
+package: Pivot
+dependencies:
+  - contact
+  - contact_formatter
+  - entity_reference_revisions
+  - field
+  - file
+  - filter
+  - image
+  - link
+  - options
+  - paragraphs
+  - system
+  - text
+  - user
+  - views
+  - viewsreference
+
+version: '8.x-2.0-alpha3'
+core: '8.x'
+project: 'pivot_paragraphs'

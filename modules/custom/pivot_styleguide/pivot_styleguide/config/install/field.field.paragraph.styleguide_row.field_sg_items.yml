@@ -1,0 +1,96 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sg_items
+    - paragraphs.paragraphs_type.styleguide_image
+    - paragraphs.paragraphs_type.styleguide_row
+    - paragraphs.paragraphs_type.styleguide_swatch_row
+    - paragraphs.paragraphs_type.styleguide_text
+    - paragraphs.paragraphs_type.styleguide_typography_row
+    - paragraphs.paragraphs_type.styleguide_vid
+    - paragraphs.paragraphs_type.view_reference
+  module:
+    - entity_reference_revisions
+id: paragraph.styleguide_row.field_sg_items
+field_name: field_sg_items
+entity_type: paragraph
+bundle: styleguide_row
+label: 'Guide items'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      styleguide_text: styleguide_text
+      styleguide_typography_row: styleguide_typography_row
+      styleguide_swatch_row: styleguide_swatch_row
+      view_reference: view_reference
+      styleguide_image: styleguide_image
+      styleguide_vid: styleguide_vid
+    target_bundles_drag_drop:
+      styleguide_row:
+        weight: 15
+        enabled: false
+      benefit_list_with_icons:
+        weight: 16
+        enabled: false
+      content_body:
+        weight: 17
+        enabled: false
+      content_column:
+        weight: 18
+        enabled: false
+      styleguide_text:
+        enabled: true
+        weight: 18
+      content_with_sidebar:
+        weight: 19
+        enabled: false
+      styleguide_colors:
+        weight: 19
+        enabled: false
+      feature_list_w_icons_:
+        weight: 20
+        enabled: false
+      styleguide_typography_row:
+        enabled: true
+        weight: 20
+      styleguide_swatch_row:
+        enabled: true
+        weight: 21
+      icon_with_caption:
+        weight: 21
+        enabled: false
+      image_and_content:
+        weight: 22
+        enabled: false
+      inset_image:
+        weight: 23
+        enabled: false
+      inset_image_right:
+        weight: 24
+        enabled: false
+      reference_a_block:
+        weight: 25
+        enabled: false
+      row_product_benefits:
+        weight: 26
+        enabled: false
+      slide_image_para:
+        weight: 27
+        enabled: false
+      view_reference:
+        enabled: true
+        weight: 28
+      styleguide_image:
+        enabled: true
+        weight: 31
+      styleguide_vid:
+        enabled: true
+        weight: 33
+field_type: entity_reference_revisions

@@ -1,0 +1,94 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.pp_column_content_2
+    - paragraphs.paragraphs_type.pp_accordion
+    - paragraphs.paragraphs_type.pp_blank
+    - paragraphs.paragraphs_type.pp_block
+    - paragraphs.paragraphs_type.pp_carousel
+    - paragraphs.paragraphs_type.pp_columns
+    - paragraphs.paragraphs_type.pp_columns_three_uneven
+    - paragraphs.paragraphs_type.pp_columns_two_uneven
+    - paragraphs.paragraphs_type.pp_contact
+    - paragraphs.paragraphs_type.pp_image
+    - paragraphs.paragraphs_type.pp_modal
+    - paragraphs.paragraphs_type.pp_simple
+    - paragraphs.paragraphs_type.pp_tabs
+    - paragraphs.paragraphs_type.pp_view
+  module:
+    - entity_reference_revisions
+id: paragraph.pp_columns_two_uneven.pp_column_content_2
+field_name: pp_column_content_2
+entity_type: paragraph
+bundle: pp_columns_two_uneven
+label: 'Column Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      pp_simple: pp_simple
+      pp_image: pp_image
+      pp_blank: pp_blank
+      pp_accordion: pp_accordion
+      pp_carousel: pp_carousel
+      pp_columns: pp_columns
+      pp_columns_three_uneven: pp_columns_three_uneven
+      pp_columns_two_uneven: pp_columns_two_uneven
+      pp_contact: pp_contact
+      pp_block: pp_block
+      pp_modal: pp_modal
+      pp_tabs: pp_tabs
+      pp_view: pp_view
+    target_bundles_drag_drop:
+      pp_simple:
+        enabled: true
+        weight: -31
+      pp_image:
+        enabled: true
+        weight: -30
+      pp_blank:
+        enabled: true
+        weight: -29
+      pp_accordion:
+        enabled: true
+        weight: -28
+      pp_carousel:
+        enabled: true
+        weight: -27
+      pp_columns:
+        enabled: true
+        weight: -26
+      pp_columns_three_uneven:
+        enabled: true
+        weight: -25
+      pp_columns_two_uneven:
+        enabled: true
+        weight: -24
+      pp_contact:
+        enabled: true
+        weight: -23
+      pp_block:
+        enabled: true
+        weight: -22
+      pp_modal:
+        enabled: true
+        weight: -21
+      pp_tabs:
+        enabled: true
+        weight: -20
+      pp_view:
+        enabled: true
+        weight: -19
+      pp_accordion_section:
+        weight: -18
+        enabled: false
+      pp_tab_section:
+        weight: -17
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,19 @@
+name: Pivot Styleguide
+description: 'Provides Styleguide content type and related configuration. Content type for online styleguide.'
+type: module
+core: 8.x
+package: Pivot
+dependencies:
+  - block
+  - entity_reference_revisions
+  - field
+  - file
+  - image
+  - node
+  - paragraphs
+  - path
+  - pathauto
+  - system
+  - text
+  - user
+  - video_embed_field

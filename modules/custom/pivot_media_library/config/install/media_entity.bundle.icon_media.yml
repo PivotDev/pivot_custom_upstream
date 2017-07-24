@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_image
+id: icon_media
+label: Icon
+description: 'Add icon for headers'
+type: image
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  source_field: field_image_media
+  gather_exif: false
+field_map: {  }

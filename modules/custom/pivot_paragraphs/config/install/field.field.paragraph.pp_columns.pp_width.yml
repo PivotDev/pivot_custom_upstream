@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.pp_width
+    - paragraphs.paragraphs_type.pp_columns
+  module:
+    - options
+id: paragraph.pp_columns.pp_width
+field_name: pp_width
+entity_type: paragraph
+bundle: pp_columns
+label: Width
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
