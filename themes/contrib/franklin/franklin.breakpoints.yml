@@ -1,0 +1,30 @@
+franklin.mobile:
+  label: mobile
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+franklin.narrow:
+  label: narrow
+  mediaQuery: 'all and (min-width: 768px) and (max-width: 991px)'
+  weight: 1
+  multipliers:
+    - 1x
+franklin.normal:
+  label: normal
+  mediaQuery: 'all and (min-width: 992px)'
+  weight: 2
+  multipliers:
+    - 1x
+franklin.desktop:
+  label: desktop
+  mediaQuery: 'all and (min-width: 1200px)'
+  weight: 3
+  multipliers:
+    - 1x
+franklin.wide:
+  label: wide
+  mediaQuery: 'all and (min-width: 2000px)'
+  weight: 4
+  multipliers:
+    - 1x

@@ -1,0 +1,88 @@
+.path-user:not(.user-logged-in) {
+  background: black url("../imgs/bg_login.jpg") no-repeat center center/cover;
+}
+
+#login-logo a {
+  background-image   : url("../imgs/activcore_mark.svg");
+  background-size    : 40px;
+  background-position: center top;
+  background-repeat  : no-repeat;
+  display            : block;
+  width              : 60px;
+  height             : 80px;
+  margin             : 0 auto;
+  text-indent        : -9999px;
+  overflow           : hidden;
+  opacity            : 0.6;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.path-user:not(.user-logged-in) .layout-content {
+  padding-left : 30px;
+  padding-right: 30px;
+  position     : relative;
+  height       : 90vh;
+  width        : 100%;
+  /* vertical center form */
+  .region-content {
+    @include center-vertically;
+
+    form {
+      /* padding-top        : 15vh;*/
+      /* background-color: rgba(255, 34, 17, .4);*/
+      min-width: 100px;
+      max-width: 400px;
+      margin   : 0 auto;
+      @include tablet-narrow {
+        width    : 50%;
+        max-width: 500px;
+        padding  : 0 20px;
+      }
+
+      .form-actions,
+      .form-item {
+        position: relative;
+        height  : 60px;
+      }
+
+      input {
+        position: absolute;
+        top     : 0;
+        @include font-size(2);
+
+        &:focus {
+          color: white;
+        }
+      }
+
+      input#edit-submit {
+        color: grey;
+
+        &:hover {
+          border-color       : $red;
+          color              : $red;
+          border-bottom-width: 5px;
+        }
+      }
+
+      .description {
+        display: none;
+      }
+
+      p {
+        color      : grey;
+        font-size  : small;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.path-user:not(.user-logged-in) {
+  footer {
+    height: 10vh;
+  }
+}

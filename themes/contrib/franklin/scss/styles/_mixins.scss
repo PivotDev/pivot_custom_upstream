@@ -1,0 +1,143 @@
+@mixin font-size($sizeValue: 1.6) {
+  font-size: $sizeValue * 10 + px;
+  font-size: $sizeValue + rem;
+}
+@mixin min_height_max($div-min-height,$div-height,$div-max-height) {
+  min-height: $div-min-height;
+  height    : $div-height;
+  max-height: $div-max-height;
+}
+// Fancy borders
+@mixin add_border($args...) {
+  border-bottom-style: solid;
+  border-bottom-width: 8px;
+  border-bottom-color: $args;
+  @include normal {
+    border-bottom-width: 10px;
+  }
+  @include desktop {
+    border-bottom-width: 10px;
+  }
+  @include wide {
+    border-bottom-width: 12px;
+  }
+  @include giant {
+    border-bottom-width: 14px;
+  }
+}
+/* Card heights*/
+@mixin card_settings {
+  height: 300px;
+  @include tablet-narrow {
+     @include min_height_max(200px,40vh,800px);
+  }
+  @include desktop {
+     @include min_height_max(200px,50vh,800px);
+  }
+  @include wide {
+     @include min_height_max(200px,60vh,800px);
+  }
+}
+@mixin absolute-all {
+  position: absolute;
+  top     : 0;
+  right   : 0;
+  bottom  : 0;
+  left    : 0;
+}
+/* transitions shared*/
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  transition        : $args;
+}
+@mixin vert_padding {
+   @include tablet-narrow{
+    /* padding: 3vw 0;*/
+  }
+  @include desktop {
+    /* padding: 4vw 0;*/
+  }
+  @include giant {
+    /* padding-top   : 6vh;*/
+    /* padding-bottom: 6vh;*/
+  }
+}
+@mixin debug-layout {
+  outline: 1px solid magenta;
+}
+@mixin debug-pink {
+  background-color: pink;
+}
+@mixin debug-blue {
+  background-color: lightblue;
+}
+/* Simple mixins*/
+#{$a-tags} {
+  text-decoration: none;
+  color          : blue;
+  @include transition(all .2s ease);
+}
+
+#{$a-tags-hover} {
+  color          : magenta;
+  text-decoration: none;
+}
+
+#{$h-tags} {
+  font-weight: 300;
+  margin     : 0;
+  line-height: 1.1;
+}
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+@mixin center-block {
+  display     : block;
+  margin-left : auto;
+  margin-right: auto;
+}
+@mixin center-vertically {
+  position         : relative;
+  top              : 50%;
+  -webkit-transform: translateY(-50%);
+  transform        : translateY(-50%);
+}
+/* List options*/
+/* [converter] extracted from `.list-unstyled` for libsass compatibility*/
+@mixin list-unstyled {
+  padding-left: 0;
+  list-style  : none;
+}
+/* [converter] extracted as `@mixin list-unstyled` for libsass compatibility*/
+.list-unstyled {
+  @include list-unstyled;
+}
+/* Inline turns list items into inline-block*/
+.list-inline {
+  @include list-unstyled;
+  margin-left: -5px;
+
+  > li {
+    display      : inline-block;
+    padding-left : 5px;
+    padding-right: 5px;
+  }
+}

@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Theme override of an image.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the img tag.
+ * - style_name: (optional) The name of the image style applied.
+ *
+ * @see template_preprocess_image()
+ */
+#}
+
+{% if attributes.bg_url %}
+  <div class="media-cover" style="background-image: {{ attributes.bg_url }}" {{ attributes.addClass(classes).removeAttribute('src', 'width', 'height', 'alt', 'bg_url') }}></div>
+{% else %}
+
+  {% set classes = [style_name
+      ? 'image-style-' ~ style_name | clean_class] %}
+  <img{{ attributes.addClass(classes) }}/>
+
+{% endif %}

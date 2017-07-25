@@ -1,0 +1,80 @@
+.container-accordion {
+  padding-top   : 5vw;
+  padding-bottom: 5vw;
+}
+// Kill all corners - other default UI
+
+.ui-accordion * {
+  border-radius: 0 !important;
+}
+
+.ui-accordion-header:active,
+.ui-accordion-header:focus {
+  // border : 0 !important;
+  outline: 0 !important;
+}
+/* Interaction states
+----------------------------------*/
+.ui-widget-content {
+  border    : 0;
+  background: white;
+  color     : inherit;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  // border     : 1px solid #d3d3d3;
+  border          : 0;
+  // background : rgba(0, 0, 0, .1);
+  font-weight     : inherit;
+  color           : $dark_grey;
+  background-image: none;
+  background-color: rgba(204, 204, 204, .5);
+
+  &.ui-state-active {
+    background-color: white;
+    color           : $red;
+  }
+}
+/*!
+ * jQuery UI Accordion 1.11.4
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/accordion/#theming
+ */
+.ui-accordion .ui-accordion-header {
+  display   : block;
+  cursor    : pointer;
+  position  : relative;
+  margin    : 2px 0 0;
+  padding   : 1.5em 0.5em 1.5em 0.7em;
+  min-height: 0;
+  /* support: IE7 */
+  font-size : 100%;
+}
+
+.ui-accordion .ui-accordion-icons {
+  padding-left: 2.2em;
+}
+
+.ui-accordion .ui-accordion-icons .ui-accordion-icons {
+  padding-left: 2.2em;
+}
+
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+  position  : absolute;
+  left      : 0.5em;
+  top       : 50%;
+  margin-top: -8px;
+}
+
+.ui-accordion .ui-accordion-content {
+  padding   : 1em 2.2em;
+  border-top: 0;
+  overflow  : auto;
+}

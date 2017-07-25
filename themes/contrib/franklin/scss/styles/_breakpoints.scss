@@ -1,0 +1,45 @@
+@mixin up-to-mobile {
+   @media (max-width: #{$tweener} - 1px){
+    @content;
+  }
+}
+@mixin up-to-tablet {
+   @media (max-width: #{$narrow} - 1px){
+    @content;
+  }
+}
+@mixin phone-landscape {
+   @media (max-width: #{$narrow} - 1px) and (orientation: landscape){
+    @content;
+  }
+}
+@mixin tablet-narrow {
+   @media (min-width: #{$narrow}){
+    @content;
+  }
+}
+@mixin normal {
+   @media (min-width: #{$normal}){
+    @content;
+  }
+}
+@mixin desktop {
+   @media (min-width: #{$desktop}){
+    @content;
+  }
+}
+@mixin wide {
+   @media (min-width: #{$wide}){
+    @content;
+  }
+}
+@mixin giant {
+   @media (min-width: #{$giant}){
+    @content;
+  }
+}
+@mixin landscape {
+   @media (min-width: #{$landscape}){
+    @content;
+  }
+}

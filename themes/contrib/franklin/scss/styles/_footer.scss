@@ -1,0 +1,99 @@
+footer {
+  background-color: black;
+  padding-top     : 20px;
+  padding-bottom  : 20px;
+  overflow        : hidden;
+
+  body.path-user & {
+    padding         : 0;
+    background-color: transparent;
+  }
+
+  #tagline {
+    text-align: center;
+    position  : relative;
+    @include tablet-narrow {
+      text-align: left;
+      height    : 40px;
+    }
+
+    img {
+      max-width: 500px;
+      width    : 80%;
+      @include tablet-narrow {
+         @include center-vertically;
+      }
+    }
+  }
+
+  ul.menu {
+    text-align : center;
+    margin     : 0;
+    color      : $dark_grey;
+    font-weight: 400;
+
+    a {
+      color: white;
+    }
+    @include tablet-narrow {
+      text-align: left;
+    }
+  }
+
+  .menu_copyright {
+    @include tablet-narrow {
+      padding-top: 30px;
+    }
+  }
+}
+/* Social media menu /  block*/
+.menu_socialmedia {
+  padding-top   : 20px;
+  padding-bottom: 20px;
+  @include tablet-narrow {
+    padding-top   : 0;
+    padding-bottom: 0;
+  }
+
+  ul.menu {
+    margin     : 0 auto;
+    line-height: 0.8em;
+    /* @include up-to-narrow {*/
+    /*   margin-bottom: 15px;*/
+    /* }*/
+    @include tablet-narrow {
+      float: right;
+    }
+  }
+
+  li {
+    a {
+      width            : 30px;
+      height           : 30px;
+      background-size  : 100%;
+      background-repeat: no-repeat;
+      display          : block;
+      text-indent      : -9999px;
+      overflow         : hidden;
+      @include normal {
+        width : 40px;
+        height: 40px;
+      }
+
+      &.linkedin {
+        background-image: url("../imgs/linkedin.svg");
+      }
+
+      &.facebook {
+        background-image: url("../imgs/facebook.svg");
+      }
+
+      &.googleplus {
+        background-image: url("../imgs/googleplus.svg");
+      }
+    }
+    @include tablet-narrow {
+      margin-right: -4px;
+    }
+  }
+}

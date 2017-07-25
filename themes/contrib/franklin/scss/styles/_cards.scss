@@ -1,0 +1,201 @@
+.basic_card,
+.overlay_card {
+  background-color: white;
+  position        : relative;
+
+  .card-inner {
+    position: relative;
+    overflow: hidden;
+    padding : 15px 0;
+    @include card_settings;
+  }
+
+  .card_link {
+    width: 100%;
+    @include tablet-narrow {
+      padding : 15px 0;
+      position: absolute;
+      bottom  : 0;
+    }
+    @include giant {
+      padding: 30px 0;
+    }
+
+    a {
+      padding       : 10px 0;
+      @include add_border($red);
+      text-transform: uppercase;
+      width         : 100%;
+      display       : block;
+    }
+  }
+
+  .media-cover {
+    @include absolute-all;
+    background-size    : cover;
+    background-position: center center;
+    background-repeat  : no-repeat;
+    /* Match card */
+    @include card_settings;
+  }
+}
+/*  CARDS WITH HOVER OVERLAY
+    extends basic card with custom hover overlay */
+.overlay_card {
+  background-color: black;
+  @include card_settings;
+  overflow        : hidden;
+
+  .overlay-outer {
+    @include card_settings;
+    @include absolute-all;
+
+    .overlay-content {
+      opacity           : 0;
+      background-color  : rgba(0, 0, 0, .6);
+      @include card_settings;
+      pointer-events    : none;
+      width             : 100%;
+      padding           : 45px 15px 15px;
+      -webkit-transition: (all .3s ease-in-out 0s);
+      transition        : (all .3s ease-in-out 0s);
+      /* Note delays for hover */
+      @include giant {
+        padding: 60px 30px 30px;
+      }
+    }
+
+    p {
+      margin: 0;
+      color : white;
+    }
+  }
+
+  &:hover .overlay-content {
+    opacity           : 1;
+    -webkit-transition: (all .3s ease-in-out .3s);
+    transition        : (all .3s ease-in-out .3s);
+  }
+
+  .card-inner {
+    padding: 0;
+  }
+
+  .card_content {
+    @include card_settings;
+    position: relative;
+    @include transition(all .3s ease-in-out);
+  }
+
+  &:hover .card_content {
+    /* Change translate height per breakpoint*/
+    -webkit-transform: translateY(-300px);
+    transform        : translateY(-300px);
+    @include tablet-narrow {
+      -webkit-transform: translateY(-40vh);
+      transform        : translateY(-40vh);
+    }
+    @include desktop {
+      -webkit-transform: translateY(-50vh);
+      transform        : translateY(-50vh);
+    }
+    @include wide {
+      -webkit-transform: translateY(-60vh);
+      transform        : translateY(-60vh);
+    }
+
+    h2 {
+      bottom      : -30px;
+      color       : transparent;
+      border-color: rgba(255, 255, 255, .3);
+      @include giant {
+        bottom: -45px;
+      }
+    }
+  }
+
+  h2 {
+    position      : absolute;
+    bottom        : 15px;
+    padding-bottom: 20px;
+    width         : 100%;
+    color         : white;
+    line-height   : 1;
+    @include add_border(white);
+    @include transition(all .3s ease-in-out);
+    @include giant {
+      bottom: 30px;
+    }
+  }
+  // Put link over entire card
+  .location-card .link-item a {
+    // background-color: rgba(255, 0, 0, .3);
+    z-index    : 5;
+    text-indent: -99999px;
+    overflow   : hidden;
+    @include card_settings;
+    @include absolute-all;
+  }
+
+  h3 {
+    color      : white;
+    font-weight: 800;
+  }
+}
+/* Location h2 */
+.location-card h2 {
+  line-height   : 60vh;
+  text-align    : center;
+  text-transform: uppercase;
+  font-weight   : 800;
+  /* Change line-height per breakpoint */
+  line-height   : 285px;
+  @include tablet-narrow {
+    line-height: calc(40vh - 15px);
+  }
+  @include desktop {
+    line-height: calc(50vh - 15px);
+  }
+  @include wide {
+    line-height: calc(60vh - 100px);
+  }
+}
+/*  REFERENCED CARDS
+    - DIVs nest differently - adjust accord. */
+.block-ref_card {
+  padding-left : 0;
+  padding-right: 0;
+
+  .basic_card,
+  .overlay_card .card-inner {
+    padding: 0 15px;
+    @include giant {
+      padding: 0 30px;
+    }
+  }
+}
+
+.location-contact {
+  @include tablet-narrow {
+    position: absolute;
+    left    : 15px;
+    bottom  : 30px;
+  }
+  @include giant {
+    left  : 30px;
+    bottom: 60px;
+  }
+}
+// Custom AFTER for opening soon
+
+h2.coming-soon:after {
+  content       : 'Opening soon';
+  display       : block;
+  color         : white;
+  width         : 100%;
+  position      : absolute;
+  top           : 60%;
+  line-height   : 1;
+  text-transform: uppercase;
+  @include font-size(2);
+}

@@ -1,0 +1,112 @@
+.location_landing {
+  // Hours field ignores display mode - so hide
+  .node--view-mode-full {
+    > div.node__content > div.container-fluid {
+      display: none;
+    }
+
+    .office_hours {
+      background-color: $frost;
+      display         : block;
+    }
+
+    .node--view-mode-state-page {
+      > h2 {
+        position: absolute;
+        z-index : 5;
+
+        a {
+          color: white !important;
+          // pointer-events: none;
+        }
+      }
+
+      .row {
+        overflow: hidden;
+      }
+
+      .col-sm-4:not(.location-photo) {
+        padding-top   : 3vw;
+        padding-bottom: 3vw;
+      }
+    }
+
+    .media-cover {
+      @include tablet-narrow {
+        position: absolute;
+        top     : 0;
+        right   : 0;
+        bottom  : 0;
+        left    : -15px;
+        width   : 100%;
+        height  : auto;
+      }
+      @include giant {
+        left: -30px;
+      }
+    }
+
+    .content-inner {
+      background-color: rgba(255, 255, 0, .7);
+      position        : absolute;
+      z-index         : 3;
+      bottom          : 15px;
+      left            : 15px;
+      @include up-to-mobile {
+        padding:: 0 15px;
+      }
+    }
+    // Repeat of landing -- may need to change later
+    .node--type-location.node--view-mode-full {
+      .media-cover {
+        @include tablet-narrow {
+          position: absolute;
+          top     : 0;
+          right   : 0;
+          bottom  : 0;
+          left    : -15px;
+          width   : 100%;
+          height  : auto;
+        }
+        @include giant {
+          left: -30px;
+        }
+      }
+
+      .content-inner {
+        background-color: rgba(255, 255, 0, .7);
+        position        : absolute;
+        z-index         : 3;
+        bottom          : 15px;
+        left            : 15px;
+        @include up-to-tablet {
+          padding:: 0 15px;
+        }
+      }
+    }
+    // Column with location photo
+    .location-photo {
+      @include up-to-tablet {
+        margin    : 0 -15px;
+        min-height: 45vh;
+
+        .media-cover {
+          min-height: 45vh;
+        }
+      }
+      @include tablet-narrow {
+        min-height: 40vw;
+
+        .media-cover {
+          min-height: 40vw;
+        }
+      }
+    }
+  }
+}
+
+.location_landing .node--view-mode-full .container-fluid {
+  &:nth-child(even) {
+    background-color: $frost;
+  }
+}

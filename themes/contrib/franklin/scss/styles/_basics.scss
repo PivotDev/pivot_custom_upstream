@@ -1,0 +1,56 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x             : hidden;
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing         : antialiased;
+  @include font-size(1.6);
+  color                  : $black;
+  @include up-to-mobile {
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+.is-vert-center,
+.vert-center {
+  @include tablet-narrow {
+     @include center-vertically;
+  }
+}
+
+img {
+  width : 100%;
+  height: auto;
+}
+
+.cover {
+  background-size    : cover;
+  background-position: center top;
+  background-repeat  : no-repeat;
+  @include min_height_max(200px,40vh,800px);
+}
+
+.media-cover {
+  background-size    : cover;
+  background-position: center top;
+  background-repeat  : no-repeat;
+  height             : 60vw;
+  @include tablet-narrow {
+     @include min_height_max(200px,30vw,800px);
+  }
+}
+
+.region {
+  clear: both;
+}
+
+.region-content {
+  background-color: white;
+
+  .path-user & {
+    background-color: transparent;
+  }
+}

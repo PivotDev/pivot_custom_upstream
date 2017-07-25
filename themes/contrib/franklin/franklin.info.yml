@@ -1,0 +1,23 @@
+name: Franklin
+type: theme
+description: Pivot Design - subtheme based on classy core theme.
+core: 8.x
+base theme: classy
+libraries:
+  - franklin/global-styling
+  - franklin/global-scripts
+regions:
+  header: Header
+  admin_tabs: Admin Tabs
+  hero: Hero
+  preface: Preface
+  content: Main Content
+  postscript: Postscript
+  footer: Footer
+  modal: Modal
+stylesheets-remove:
+  - '@classy/css/components/menu.css'
+  - '@classy/css/components/tabs.css'
+  - '@classy/css/components/form.css'
+  - '@classy/css/components/button.css'
+  - modules/contrib/responsive_menu/css/responsive_menu.css

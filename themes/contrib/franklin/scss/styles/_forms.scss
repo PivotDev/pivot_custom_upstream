@@ -1,0 +1,180 @@
+input,
+textarea {
+  color        : white;
+  border       : 0;
+  border-bottom: 1px solid grey;
+  @include input-placeholder {
+    color: grey;
+  }
+}
+
+.path-user input[type=submit],
+input[type=email],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=url],
+textarea {
+  appearance           : none;
+  -moz-appearance      : none;
+  -webkit-appearance   : none;
+  border-radius        : 0;
+  -moz-border-radius   : 0;
+  -webkit-border-radius: 0;
+  width                : 100%;
+  background-color     : transparent;
+  padding              : 0.5em 0.25em;
+  @include font-size(1.6);
+  text-align           : left;
+  border-bottom        : 1px solid grey;
+  @include transition(all .3s ease);
+
+  &:focus {
+    outline            : 0;
+    border-color       : $red;
+    border-bottom-width: 5px;
+    font-weight        : 400;
+  }
+}
+
+.form-actions {
+  margin-top: 2em;
+}
+/* RADIOS + CHECKBOXES */
+.form-type-checkbox,
+.form-type-radio {
+  label {
+    font-weight: 400;
+    line-height: 1.2;
+    @include font-size(1.6);
+    margin     : 0;
+    @include tablet-narrow {
+       @include font-size(1.6);
+    }
+    @include desktop {
+      /*  @include font-size(2.5);*/
+    }
+    @include wide {
+       @include font-size(1.8);
+    }
+    @include giant {
+      /*  @include font-size(4);*/
+    }
+  }
+}
+
+legend {
+  border: 0;
+  margin: 0;
+}
+/* WEBFORM specific */
+fieldset {}
+/* Required radios legend won't hide?*/
+.fieldset-wrapper {
+  overflow: hidden;
+  padding : 3vh 0;
+
+  fieldset fieldset & {
+    padding: 0;
+  }
+}
+/* GIANT radios
+/* hide inputs from user */
+#edit-select-contact-form--wrapper {
+  legend {
+    position : absolute !important;
+    clip     : rect(1px, 1px, 1px, 1px);
+    overflow : hidden;
+    height   : 1px;
+    width    : 1px;
+    word-wrap: normal;
+  }
+  /* Form selector radios*/
+  .form-type-radio {
+    float  : left;
+    /* background-color: pink;*/
+    width  : 50%;
+    padding: 0 15px;
+
+    &:first-child {
+      padding-right: 7px;
+    }
+
+    &:last-child {
+      padding-left: 7px;
+    }
+    @include giant {
+      padding: 0 30px;
+
+      &:first-child {
+        padding-right: 15px;
+      }
+
+      &:last-child {
+        padding-left: 15px;
+      }
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    label {
+      padding      : 0.5em 0.5em 0.5em 0;
+      border-bottom: 10px solid #eee;
+      width        : 100%;
+      color        : $med_grey;
+      @include transition(all .3s ease);
+      @include font-size(1.8);
+      @include tablet-narrow {
+         @include font-size(2);
+      }
+      @include desktop {
+         @include font-size(2.5);
+      }
+      @include wide {
+         @include font-size(3);
+      }
+      @include giant {
+         @include font-size(4);
+      }
+    }
+
+    input:checked + label {
+      color       : $red;
+      border-color: $red;
+    }
+  }
+}
+
+.webform-submission-form {
+  /* First fieldset usually doesn't need as much padding */
+  > fieldset:first-of-type .fieldset-wrapper {
+    padding: 0;
+  }
+  /* Typography*/
+  p {
+    margin: 0;
+  }
+}
+
+input.webform-submit {
+  padding         : 1em;
+  display         : inline-block;
+  width           : 100%;
+  background-color: $red;
+  @include transition(all .3s ease);
+  text-transform  : uppercase;
+
+  &:active,
+  &:focus,
+  &:hover {
+    outline: 0;
+    border : 0;
+  }
+
+  &:hover {
+    background-color: $dark_grey;
+  }
+}

@@ -1,0 +1,73 @@
+.node_hero,
+.parallax-header {
+  .cover {
+    position           : relative;
+    background-size    : cover;
+    background-position: center top;
+    background-repeat  : no-repeat;
+    background-color   : $med_grey;
+    @include min_height_max(200px,50vh,800px);
+    @include desktop {
+       @include min_height_max(200px,70vh,800px);
+    }
+
+    p {
+      color: white;
+    }
+  }
+
+  h1 {
+    @include font-size(6);
+    color: white;
+    @include tablet-narrow {
+       @include font-size(8);
+    }
+    @include desktop {
+       @include font-size(10);
+    }
+    @include giant {
+       @include font-size(12);
+    }
+  }
+
+  h2.page-title {
+    text-transform: uppercase;
+    @include font-size(1.4);
+    font-weight   : 800;
+    padding-bottom: 15px;
+    @include add_border(white);
+    color         : white;
+    letter-spacing: 0.05em;
+  }
+  /* Hack for mobile - simulate text being below to image */
+  @include up-to-tablet {
+    .cover {
+      height: 70vh;
+    }
+
+    .row.is-vert-center {
+      position: absolute;
+      bottom  : 0;
+      left    : 15px;
+      right   : 15px;
+    }
+
+    .hero_text-block {
+      padding-bottom: 30px;
+    }
+
+    .hero_text-content {
+      background-color: white;
+      padding-top     : 15px;
+      padding-bottom  : 10px;
+
+      p {
+        color: black;
+      }
+
+      p:last-child {
+        margin: 0;
+      }
+    }
+  }
+}

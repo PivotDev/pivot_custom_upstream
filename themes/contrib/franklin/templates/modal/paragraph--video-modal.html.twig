@@ -1,0 +1,60 @@
+
+{%
+  set classes = [
+    'video_wrapper',
+  ]
+%}
+
+  <div{{ attributes.addClass(classes) }}>
+
+
+
+      {% if content.field_video_link_modal|render is not empty %}
+
+<div class="video-preview">
+  <a type="button" data-toggle="modal" data-target="#media-modal">
+<div class="inner">
+<div class="text-center container-fluid content-above">
+  {{ content.field_content_text_wide }}
+</div>
+
+    <div class="play-button">
+    Play Video
+    </div>
+    </div>
+    {{ content.field_video_preview_modal }}
+  </a>
+</div>
+
+<div id="media-modal" class="modal fade" role="dialog" data-backdrop="false">
+<div class="modal-dialog">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="video-container">
+        <iframe width="100%" height="100%" src="{{ content.field_video_link_modal[0]['#url']|render }}" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+
+
+
+
+
+{% endif %}
+
+
+
+
+{% if content.field_video_link_modal|render is empty %}
+{{ content.field_video_preview_modal }}
+  {{ content.field_image }}
+{% endif %}
+  </div>

@@ -1,0 +1,80 @@
+.column-text {
+  // background-color: rgba(255, 255, 0, .5);
+}
+// Overlap banner fields
+
+.paragraph-banner {
+  @include up-to-tablet {
+    &.eq-height,
+    .eq-height {
+      height: auto !important;
+    }
+  }
+}
+
+.paragraph-banner {
+  position: relative;
+
+  .media-cover {
+    margin: 0 -15px;
+    @include tablet-narrow {
+      margin: 0;
+      @include absolute-all;
+      height: auto;
+    }
+  }
+  @include tablet-narrow {
+    .column-image,
+    .column-text {
+      min-height: 40vw;
+    }
+
+    .column-image {
+      .media-cover {
+        height             : auto;
+        max-height         : none;
+        background-position: top right;
+      }
+    }
+    // Decide order of image and text - and img cover left or right
+    &.reverse {
+      .column-image {
+        float: right;
+
+        .media-cover {
+          background-position: top left;
+        }
+      }
+    }
+  }
+}
+
+.banner_bg-gray {
+  background-color: $frost;
+  overflow        : hidden;
+}
+// Fancy text with underline
+
+.add-underline {
+  padding-bottom: 0.5em;
+  margin-bottom : 15px;
+  // border-bottom : 10px solid $red;
+  @include add_border($red);
+  display       : block;
+  // Fix to bottom desktop up
+  @include desktop {
+    position: absolute;
+    margin  : 0;
+    bottom  : 15px;
+    width   : calc(100% - 30px);
+  }
+  @include giant {
+    bottom: 30px;
+    width : calc(100% - 60px);
+  }
+
+  p {
+    margin: 0;
+    color : $red;
+  }
+}

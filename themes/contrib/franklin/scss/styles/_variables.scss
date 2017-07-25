@@ -1,0 +1,20 @@
+$red         : #ff2211;
+$med_grey    : #CCCCCC;
+$dark_grey   : #666666;
+$frost       : #EEEEEE;
+$black       : #090909;
+/* Breakpoint sizes */
+$tweener     : 450px;
+$narrow      : 768px;
+$normal      : 992px;
+$desktop     : 1023px;
+$landscape   : 1024px;
+$wide        : 1200px;
+$giant       : 1500px;
+/* HTML*/
+$a-tags      : 'a, a:active, a:hover, a:visited, a:focus';
+$h-tags      : 'h2,h3,h4,h5';
+$a-tags-hover: 'a:active, a:hover';
+/* Font embed */
+@import url( 'https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,800,800i');
+$ff-sans     : 'Muli',Helvetica,Arial,sans-serif;

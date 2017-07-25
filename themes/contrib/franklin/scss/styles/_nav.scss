@@ -1,0 +1,133 @@
+header {
+  z-index         : 5;
+  background-color: white;
+  position        : relative;
+  /* -webkit-box-shadow: $box-shadow-lite;*/
+  /* box-shadow        : $box-shadow-lite;*/
+  @include transition(all .5s ease);
+
+  &.cloned {
+    position        : fixed;
+    width           : 100%;
+    background-color: $red;
+    opacity         : 0;
+    /* Match row height - set below */
+    top             : -40px;
+    height          : 40px;
+    @include tablet-narrow {
+      top   : -50px;
+      height: 50px;
+    }
+    @include normal {
+      top   : -60px;
+      height: 60px;
+    }
+
+    .sticky & {
+      position: fixed;
+      top     : 0;
+      z-index : 10;
+      opacity : 1;
+    }
+  }
+}
+
+ul.menu {
+  margin: 0;
+}
+
+header .row {
+  /* background-color: yellow;*/
+  /* Set height of header
+  /* - content inside vertically centered*/
+  body:not(.sticky) & {
+    height: 50px;
+    @include tablet-narrow {
+      height: 80px;
+    }
+    @include normal {
+      height: 100px;
+    }
+  }
+
+  body.sticky & {
+    height: 40px;
+    @include tablet-narrow {
+      height: 50px;
+    }
+    @include normal {
+      height: 60px;
+    }
+  }
+
+  #horizontal-menu {
+    /* @include center-vertically;*/
+    a {
+      font-weight   : 800;
+      letter-spacing: 0.05em;
+      color         : $dark_grey;
+
+      body.sticky & {
+        color      : white;
+        font-weight: 400;
+      }
+    }
+  }
+}
+/* Vertical center*/
+.block-responsive-menu-toggle,
+.block_branding,
+.responsive-menu-block-wrapper {
+  @include center-vertically;
+}
+/* Site logo - switch to white for fixed */
+.site-logo {
+  @include transition(all .3s ease-in-out);
+  opacity: 1;
+
+  &.no-tagline {
+    display: none;
+    opacity: 0;
+
+    img {
+      max-width: 175px;
+    }
+
+    body.sticky & {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  body.sticky & {
+    display: none;
+    opacity: 0;
+  }
+}
+// Locations menu
+
+.pagetype-location a.locations-active {
+  color: $red !important;
+}
+
+.menu-locations li {
+  @include tablet-narrow {
+    width       : 20%;
+    margin-right: -4px;
+
+    a {
+      line-height     : 5vw;
+      font-weight     : 800;
+      color           : $med_grey;
+      display         : block;
+      text-align      : center;
+      background-color: white;
+      @include font-size(5);
+      @include transition(all .3s ease);
+
+      &:hover {
+        background-color: #eee;
+      }
+    }
+  }
+}
