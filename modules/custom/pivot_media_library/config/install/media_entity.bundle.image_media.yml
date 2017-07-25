@@ -3,13 +3,13 @@ status: true
 dependencies:
   module:
     - media_entity_image
-id: graphic
-label: Graphic
-description: ''
+id: image_media
+label: Image
+description: 'Add image for headers'
 type: image
 queue_thumbnail_downloads: false
 new_revision: false
 type_configuration:
-  source_field: ''
+  source_field: field_image_media
   gather_exif: false
 field_map: {  }

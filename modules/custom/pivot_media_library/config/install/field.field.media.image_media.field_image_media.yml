@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.media.field_media_graphic
-    - media_entity.bundle.graphic
+    - field.storage.media.field_image_media
+    - media_entity.bundle.image_media
   module:
     - image
-id: media.graphic.field_media_graphic
-field_name: field_media_graphic
+id: media.image_media.field_image_media
+field_name: field_image_media
 entity_type: media
-bundle: graphic
-label: Graphic
+bundle: image_media
+label: Image
 description: ''
 required: false
 translatable: false
@@ -18,7 +18,7 @@ default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: media/images
-  file_extensions: 'png gif jpg jpeg'
+  file_extensions: 'png gif jpg jpeg svg'
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''

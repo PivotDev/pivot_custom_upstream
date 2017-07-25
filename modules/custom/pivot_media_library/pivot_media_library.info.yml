@@ -1,7 +1,7 @@
 name: 'Pivot Media Library'
 description: 'Preconfigured Media Library'
 type: module
-package: Custom
+package: Pivot
 core: 8.x
 dependencies:
   - ctools

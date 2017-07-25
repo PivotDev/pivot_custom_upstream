@@ -1,6 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: styleguide_colors
-label: 'Styleguide colors'
-behavior_plugins: {  }

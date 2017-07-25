@@ -2,16 +2,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.graphic.field_media_graphic
-    - media_entity.bundle.graphic
+    - field.field.media.image_media.field_image_media
+    - media_entity.bundle.image_media
   module:
     - image
-id: media.graphic.default
+id: media.image_media.default
 targetEntityType: media
-bundle: graphic
+bundle: image_media
 mode: default
 content:
-  field_media_graphic:
+  field_image_media:
     weight: 0
     label: hidden
     settings:

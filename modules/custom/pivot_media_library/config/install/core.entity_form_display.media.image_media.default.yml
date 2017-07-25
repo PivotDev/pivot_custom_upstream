@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.icon_media.field_image_media
+    - field.field.media.image_media.field_image_media
     - image.style.thumbnail
-    - media_entity.bundle.icon_media
+    - media_entity.bundle.image_media
   module:
     - image
-id: media.icon_media.default
+id: media.image_media.default
 targetEntityType: media
-bundle: icon_media
+bundle: image_media
 mode: default
 content:
   field_image_media:

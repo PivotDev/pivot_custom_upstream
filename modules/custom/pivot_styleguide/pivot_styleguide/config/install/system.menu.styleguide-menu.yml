@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: styleguide-menu
-label: 'Styleguide Menu'
-description: 'Primary navigation for styleguide'
-locked: false

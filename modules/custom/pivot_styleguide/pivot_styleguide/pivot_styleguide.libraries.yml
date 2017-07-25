@@ -1,5 +1,0 @@
-pivot-styleguide:
-  css:
-    component:
-      css/pivot-styleguide.css:
-        minified: false

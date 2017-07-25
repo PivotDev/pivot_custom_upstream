@@ -1,6 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: styleguide_image
-label: 'Styleguide image'
-behavior_plugins: {  }

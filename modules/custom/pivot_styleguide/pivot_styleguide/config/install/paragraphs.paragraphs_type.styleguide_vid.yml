@@ -1,6 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: styleguide_vid
-label: 'Styleguide video'
-behavior_plugins: {  }

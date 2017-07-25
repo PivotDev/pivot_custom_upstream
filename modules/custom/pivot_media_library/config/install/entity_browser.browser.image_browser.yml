@@ -2,16 +2,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - views.view.icon_library
+    - views.view.image_library
   module:
     - views
-name: icon_browser
-label: 'Icon Browser'
+name: image_browser
+label: 'Image Browser'
 display: modal
 display_configuration:
   width: '650'
   height: '500'
-  link_text: 'Icon Browser'
+  link_text: 'Image Browser'
   auto_open: true
 selection_display: no_display
 selection_display_configuration:
@@ -25,11 +25,11 @@ widget_selector_configuration: {  }
 widgets:
   388f34d6-ca20-4b76-b6ff-7d6a0d7f9cb5:
     settings:
-      view: icon_library
+      view: image_library
       view_display: entity_browser_1
-      submit_text: 'Select Icon'
+      submit_text: 'Select Image'
       auto_select: false
     uuid: 388f34d6-ca20-4b76-b6ff-7d6a0d7f9cb5
     weight: 1
-    label: 'Icon Library'
+    label: 'Image Library'
     id: view
