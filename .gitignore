@@ -46,6 +46,7 @@ sites/simpletest
 .DS_Store*
 ehthumbs.db
 Icon
+.idea
 
 Thumbs.db
 ._*
